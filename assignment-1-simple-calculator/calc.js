@@ -38,10 +38,11 @@ document.getElementById('screen').innerHTML = '';
 	document.getElementById('screen').innerHTML = ans;
 
 	while(num.length > 0){
-    	num.pop();				
+    	num.pop();
 	}
 
 	num.push(ans.toString());
+	b='';
 
 
 }
