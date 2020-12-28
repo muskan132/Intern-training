@@ -4,58 +4,45 @@ var b = '';
 var num = [];
 var ans;
 
+function sendNum(digit) {
+		if(digit >= 0 && digit <= 9) {
+			num.push(digit);
+			for(i=0; i<num.length ; i++) {
+				a = a + num[i];
+			}
+			displayText('screen',a);
+			a = '';
+		}
+}
 
-function sendNum(digit){
-
-	num.push(digit);
-
-	if(num.length != 1){
+function sendOP(digit) { //doubt regarding operator conditioning
+		num.push(digit);
+		for(i=0; i<num.length ; i++) {
+			a = a + num[i];
+		}
+		displayText('screen',a);
 		a = '';
-		document.getElementById('screen').innerHTML = a;
-	}
+ }
 
-
+function equalTo() {
 	for(i=0; i<num.length ; i++){
-
-		a = a + num[i];
-
-	}
-
-document.getElementById('screen').innerHTML = a;
-
-
-}
-
-function equalTo(){
-
-	for(i=0; i<num.length ; i++){
-
-		b += num[i];
-	}
-
+		b = b + num[i];
+ }
 	ans = eval(b);
-document.getElementById('screen').innerHTML = '';
-	document.getElementById('screen').innerHTML = ans;
-
-	while(num.length > 0){
-    	num.pop();
-	}
-
+  displayText('screen');
+	displayText('screen',ans);
+	num = [];
 	num.push(ans.toString());
-	b='';
-
-
+	b = '';
 }
 
-function clearScr()
-{
-	document.getElementById('screen').innerHTML = '';
+function clearScreen() {
+	displayText('screen');
+	num = [];
+	a = '';
+	b = '';
+}
 
-	while(num.length > 0)
-  {
-    	num.pop();
-	}
-
-	a ='';
-	b ='';
+function displayText(a , b = '') {
+	document.getElementById(a).innerHTML = b;
 }

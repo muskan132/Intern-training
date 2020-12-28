@@ -1,15 +1,15 @@
 
-div{
+div {
 	background-color: #334d4d;
 	margin: 50px;
 	width: 350px;
 	height: 550px;
-	margin: 0 auto;			
+	margin: 0 auto;
 	border-radius: 20px;
 	padding: 10px;
 }
 
-header{
+header {
 	background-color: #d1e0e0;
 	width: 330px;
 	height: 100px;
@@ -21,8 +21,8 @@ header{
 
 }
 
-table{
-	background-color: #FFFFFF;
+table {
+	background-color: #FFFFFF; //white
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-right: 10px;
@@ -30,7 +30,7 @@ table{
 	border-radius: 20px;
 }
 
-td{
+td {
 	width: 110px;
 	height: 60px;
 	text-align: center;
@@ -38,11 +38,11 @@ td{
 
 }
 
-.orange{
-	color: #ff3300;
+.orange {
+	color: #ff3300; //dark orange
 }
 
-td:active{
-	background-color: #e0e0d1;
+td:active {
+	background-color: #e0e0d1; //grey (moon mist)
 	border-radius: 20px;
 }
