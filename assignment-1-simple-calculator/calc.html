@@ -1,0 +1,49 @@
+
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+  <script src="calc.js"></script>
+  </head>
+  <body>
+  	<div>
+  		<header id="screen"></header>
+  		<table>
+        			<tbody>
+  				<tr class="orange">
+  					<td>
+             <input type="button" value="AC"
+              onclick="clearScreen()"></td>
+          	<td onclick="sendOP('*0.01')">%</td>
+          	<td onclick="sendOP('/')">/</td>
+  				</tr>
+  				<tr class="orange">
+  					<td onclick="sendOP('+')">+</td>
+  					<td onclick="sendOP('-')">-</td>
+  					<td onclick="sendOP('*')">x</td>
+  				</tr>
+  				<tr>
+  			    <td onclick="sendNum('7')">7</td>
+  			    <td onclick="sendNum('8')">8</td>
+  			    <td onclick="sendNum('9')">9</td>
+  				</tr>
+  				<tr>
+  					<td onclick="sendNum('4')">4</td>
+  					<td onclick="sendNum('5')">5</td>
+  					<td onclick="sendNum('6')">6</td>
+  				</tr>
+  				<tr>
+        		<td onclick="sendNum('1')">1</td>
+  					<td onclick="sendNum('2')">2</td>
+  					<td onclick="sendNum('3')">3</td>
+  				</tr>
+  				<tr>
+        		<td onclick="sendNum('.')">.</td>
+  					<td onclick="sendNum('0')">0</td>
+  					<td onclick="equalTo()">=</td>
+  				</tr>
+  			</tbody>
+  		</table>
+  	</div>
+  </body>
+  </html>
