@@ -5,23 +5,23 @@ var num = [];
 var ans;
 
 function sendNum(digit) {
-		if(digit >= 0 && digit <= 9) {
-			num.push(digit);
-			for(i=0; i<num.length ; i++) {
-				a = a + num[i];
-			}
-			displayText('screen',a);
-			a = '';
-		}
-}
-
-function sendOP(digit) { //doubt regarding operator conditioning
+	if(digit >= 0 && digit <= 9) {
 		num.push(digit);
 		for(i=0; i<num.length ; i++) {
 			a = a + num[i];
 		}
 		displayText('screen',a);
 		a = '';
+	}
+}
+
+function sendOP(digit) { //doubt regarding operator conditioning
+	num.push(digit);
+	for(i=0; i<num.length ; i++) {
+		a = a + num[i];
+	}
+	displayText('screen',a);
+	a = '';
  }
 
 function equalTo() {
