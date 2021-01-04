@@ -4,6 +4,10 @@ var b = '';
 var num = [];
 var ans;
 
+var tmp = [];
+var j=0;
+var tmp2=0 ;
+var x=0;
 function sendNum(digit) {
 	if(digit >= 0 && digit <= 9) {
 		num.push(digit);
@@ -29,7 +33,8 @@ function equalTo() {
 		b = b + num[i];
  }
 	ans = eval(b);*/
-	ans = evaluate(num);
+	evaluate();
+	ans=num[0];
   displayText('screen');
 	displayText('screen',ans);
 	num = [];
@@ -38,11 +43,11 @@ function equalTo() {
 }
 
 function evaluate() { // function made to replace eval , still need to be made more efficient
-	var tmp = [];
-	var j=0;
-	var tmp2 ;
-	var x;
-	for(i=0; i<num.length ; i++) {
+  j=0;
+	tmp=[];
+	tmp2=0;
+	x=0;
+	for(i=0; i<num.length && num.length>1 ; i++) {
 		b = num[i] ;
 		if(b >= 0 && b <=9) {
 			continue;
@@ -54,20 +59,25 @@ function evaluate() { // function made to replace eval , still need to be made m
 			else {
 				tmp2 = 1;
 			}
-			while(var[j] >= tmp2) {
+			while((tmp[j] >= tmp2 && j>0) || i==num.length-2) {
 				if(b == '+')
 			   x = num[i-1] + num[i+1];
-			  if(b == '*')
+			  else if(b == '*')
 	      	x = num[i-1] * num[i+1];
-	    	if(b == '/')
+	    else if(b == '/')
 	        x = num[i-1] / num[i+1];
-	      if(b == '-')
+	     else if(b == '-')
           x = num[i-1] - num[i+1];
 				num[i-1] = x;
-				num = num.splice(i , 2);
+				num.splice(i , 2);
 		    i = i-1;
-			  tmp[j] = tmp2;
+				j--;
+				if(num.length == 1)
+				break;
+				b=num[i-1];
 		}
+		//j++;
+		tmp[j]=tmp2;
 		j++;
 		}
 	}
