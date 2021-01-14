@@ -4,22 +4,22 @@ var b = '';
 var num = [];
 var ans;
 
-var tmp = [];
+/*var tmp = [];
 var j=0;
 var tmp2=0 ;
-var x=0;
+var x=0;*/
 function sendNum(digit) {
-	if(digit >= 0 && digit <= 9) {
+	/*if(digit >= 0 && digit <= 9) {*/
 		num.push(digit);
 		for(i=0; i<num.length ; i++) {
 			a = a + num[i];
 		}
 		displayText('screen',a);
 		a = '';
-	}
+	//}
 }
 
-function sendOP(digit) { //doubt regarding operator conditioning
+function sendOP(digit) {
 	num.push(digit);
 	for(i=0; i<num.length ; i++) {
 		a = a + num[i];
@@ -29,12 +29,12 @@ function sendOP(digit) { //doubt regarding operator conditioning
  }
 
 function equalTo() {
-	/*for(i=0; i<num.length ; i++){
+	for(i=0; i<num.length ; i++){
 		b = b + num[i];
  }
-	ans = eval(b);*/
-	evaluate();
-	ans=num[0];
+	ans = eval(b);
+	//evaluate();
+	//ans=num[0];
   displayText('screen');
 	displayText('screen',ans);
 	num = [];
@@ -42,7 +42,7 @@ function equalTo() {
 	b = '';
 }
 
-function evaluate() { // function made to replace eval , still need to be made more efficient
+/*function evaluate() { // function made to replace eval , still need to be made more efficient
   j=0;
 	tmp=[];
 	tmp2=0;
@@ -81,7 +81,7 @@ function evaluate() { // function made to replace eval , still need to be made m
 		j++;
 		}
 	}
-}
+}*/
 
 function clearScreen() {
 	displayText('screen');
